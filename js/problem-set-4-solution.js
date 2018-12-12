@@ -2,7 +2,7 @@
  * SOLUTION: Hello.
  */
 
-function hello() {
+function hello() { //defines function as hello
   let result = "Hello, AP Computer Science Principles!"; // variable "result" is defined as an output stating "Hello, AP Computer Science Principles!"
   document.getElementById("output1").innerHTML = result; // the variable "result" connects to html through id "output1" to function on browser
 
@@ -13,7 +13,7 @@ function hello() {
  * SOLUTION: Hello, Again.
  */
 
-function helloAgain() {
+function helloAgain() { //defines function as helloAgain
   let name = prompt("What is your name?"); //variable "name" is defined as to create a prompt to ask the user "What is your name?"
 
   let result = "Hello, " + name + "!"; // variable "result" is defined to say "Hello" [whatever name user inputs]!
@@ -26,7 +26,7 @@ function helloAgain() {
  * SOLUTION: Celsius.
  */
 
-function celsius() {
+function celsius() { //defines function as celsius
   let cels = Number(((Math.random() * 1001) - 100).toFixed(2)); //variable "cels" is defined to allow the user to input a numeric value for celsius within the range [-100, 1000], and will be rounded to 2 decimals.
 
   let fahr = cels * 9 / 5 + 32; // variable "fahr" is defined to include whatever "cels" produces and follows the given formula for converting celsius to fahrenheit
@@ -54,7 +54,7 @@ function fahrenheit() {
  * SOLUTION: Inches.
  */
 
-function inches() {
+function inches() { //defines function as inches
   const MILE = 63360; //variable "MILE" is defined as a constant that stays as the value "63360"
   const YARD = 36; //variable "YARD" is defined as a constant that stays as the value "36"
   const FOOT = 12; //variable "FOOT" is defined as a constant that stays as the value "12"
@@ -82,30 +82,30 @@ function inches() {
     inches = inches % FOOT; //inches will be represented as a percentage of feet
 
     let result = "Miles: " + miles + "<br/>" + // variable "result" will display an output the text "Miles: ", the output of miles, and a line break
-                 "Yards: " + yards + "<br/>" +
-                 "Feet: " + feet + "<br/>" +
-                 "Inches: " + inches;
-    document.getElementById("output5").innerHTML = result;
+                 "Yards: " + yards + "<br/>" + //...an output of the text "Yards: ", the output of miles, and a line break
+                 "Feet: " + feet + "<br/>" + //...an output of the text "Feet: ", output of feet and a line break
+                 "Inches: " + inches; //...an output of the text "inches" and the ouput of inches
+    document.getElementById("output5").innerHTML = result; //connects variable result to HTML to display an output
   } else {
-    document.getElementById("output5").innerHTML = "";
+    document.getElementById("output5").innerHTML = ""; //connects to HTML so it displays nothing
   }
 
-  check("inches", input);
+  check("inches", input); //tells if inches excercise is correct that corresponds with the user input
 }
 
 /*
  * SOLUTION: Centimeters.
  */
 
-function centimeters() {
-  const KILOMETER = 100000;
-  const METER = 100;
+function centimeters() { //defines function centimeters
+  const KILOMETER = 100000; //variable "KILOMETER" stays at given value
+  const METER = 100; //variable "METER" stays at given value
 
   let input = -1; // variable "input" is defined in  loop to be defined as "-1"
-  while (input < 0) {
-    input = Number(prompt("Enter a non-negative integer."));
+  while (input < 0) { //while loop states that while input < 0, the code below should run
+    input = Number(prompt("Enter a non-negative integer.")); //input is for given prompt has to be a number
 
-    if (input === null) {
+    if (input === null) { //if loop defines input as null, the code below should run
       break; //The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement
     } else if (Number.isNaN(input)) { //else if statement states condition to specify the new condition to test (if the number is not a number), if the first condition is false regarding the variable "input", the code below it should run
       input = -1; // variable "input" is defined in "else if" loop to be defined as "-1"
@@ -136,7 +136,7 @@ function centimeters() {
  * SOLUTION: Fluid Ounces.
  */
 
-function fluidOunces() {
+function fluidOunces() { //defines function as fluidOunces
   const GALLON = 128;
   const QUART = 32;
   const PINT = 16;
@@ -183,9 +183,9 @@ function fluidOunces() {
  * SOLUTION: Ounces.
  */
 
-function ounces() {
-  const TON = 32000;
-  const POUND = 16;
+function ounces() { //defines function as ounces
+  const TON = 32000; //variable "TON" stays at given value
+  const POUND = 16; //variable "POUND" stays at given value
 
   let input = -1; // variable "input" is defined as "-1"
   while (input < 0) {
@@ -222,11 +222,11 @@ function ounces() {
  * SOLUTION: Money.
  */
 
-function money() {
-  const DOLLAR = 100;
-  const QUARTER = 25;
-  const DIME = 10;
-  const NICKEL = 5;
+function money() { //defines function as money
+  const DOLLAR = 100; //variable "DOLLAR" stays at given value
+  const QUARTER = 25; //variable "QUARTER" stays at given value
+  const DIME = 10; //variable "DIME" stays at given value
+  const NICKEL = 5; //variable "NICKEL" stays at given value
 
   let input = -1; // variable "input" is defined as "-1"
   while (input < 0) {
@@ -269,10 +269,10 @@ function money() {
  * SOLUTION: Change.
  */
 
-function change() {
-  const QUARTER = 25;
-  const DIME = 10;
-  const NICKEL = 5;
+function change() { //defines function as change
+  const QUARTER = 25; //variable "QUARTER" stays at given value
+  const DIME = 10; //variable "DIME" stays at given value
+  const NICKEL = 5; //variable "NICKEL" stays at given value
 
   let input = -1; // variable "input" is defined as "-1"
   while (input < 0 || input >= 1) {
